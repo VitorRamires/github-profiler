@@ -1,0 +1,74 @@
+
+/* Geral */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1440px;
+  max-width: 85%;
+  height: 650px;
+  max-height: 75%;
+  z-index: 6;
+}
+
+.point-decoration {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  top: 0;
+  left: 0;
+  transform: translate(-35%, -30%);
+  z-index: 2;
+}
+
+.ellipse-right {
+  position: absolute;
+  width: 650px;
+  height: auto;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.ellipse-left {
+  position: absolute;
+  height: 550px;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+/* Profile Panel */
+
+.profile-panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 5;
+  overflow: auto;
+}
