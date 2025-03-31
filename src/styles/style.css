@@ -1,4 +1,3 @@
-
 /* Geral */
 * {
   padding: 0;
@@ -6,8 +5,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url(../assets/fonts/Nunito-VariableFont_wght.ttf);
+}
+
 body {
   background-color: #1f1f1f;
+  font-family: "Nunito";
 }
 
 img {
@@ -63,6 +68,26 @@ ul {
 }
 
 /* Profile Panel */
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #ffffff;
+  font-size: 4rem;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+.title img {
+  width: 60px;
+  height: auto;
+}
+
+.title span{
+  font-weight: 700;
+}
 
 .profile-panel {
   position: relative;
