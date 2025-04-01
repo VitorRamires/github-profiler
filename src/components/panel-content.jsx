@@ -1,3 +1,5 @@
+import { ProfileInfo } from "./profile-information";
+
 export function PanelContent() {
   return (
     <>
@@ -8,6 +10,7 @@ export function PanelContent() {
             Perfil <span>Github</span>
           </p>
         </div>
+        <ProfileInfo />
       </div>
     </>
   );
