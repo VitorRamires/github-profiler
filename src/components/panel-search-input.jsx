@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-export function SearchInput({ setUserName }) {
+export function SearchInput({ setUserName, fetchProfile }) {
   const [inputValue, setInputValue] = useState("");
 
   function handleSubmitInput(event) {
     event.preventDefault();
+    fetchProfile(inputValue);
     setUserName(inputValue);
   }
 
@@ -15,9 +16,10 @@ export function SearchInput({ setUserName }) {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <div className="buscar">
-        <button onClick={handleSubmitInput}>Buscar</button>
-      </div>
+
+      <button onClick={handleSubmitInput}>
+        <img src="/src/assets/icons/search-icon.svg" alt="" />
+      </button>
     </div>
   );
 }

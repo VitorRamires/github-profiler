@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export function useGithubProfile(userName) {
+export function useGithubProfile() {
   const [profile, setProfile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  async function fetchProfile() {
+  async function fetchProfile(userName) {
     setIsLoading(true);
     try {
       const response = await fetch(`https://api.github.com/users/${userName}`);
@@ -12,15 +12,10 @@ export function useGithubProfile(userName) {
       setProfile(data);
     } catch {
       setProfile(null);
-      console.log("Algo deu errado ao buscar o profile");
     } finally {
       setIsLoading(false);
     }
   }
 
-  useEffect(() => {
-    fetchProfile();
-  }, [userName]);
-
-  return { profile, isLoading };
+  return { profile, isLoading, fetchProfile };
 }

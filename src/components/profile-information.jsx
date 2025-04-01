@@ -4,21 +4,33 @@ import { useGithubProfile } from "../hooks/useGithubProfile";
 
 export function ProfileInfo() {
   const [userName, setUserName] = useState("");
-  const { profile, isLoading } = useGithubProfile(userName);
+  const { profile, isLoading, fetchProfile } = useGithubProfile();
+
+  const verifyProfile = profile && profile.name;
 
   return (
     <>
-      <SearchInput setUserName={setUserName} />
+      <SearchInput
+        setUserName={setUserName}
+        userName={userName}
+        fetchProfile={fetchProfile}
+      />
       {isLoading ? (
         "Buscando"
-      ) : profile ? (
-        <div className="infos">
+      ) : verifyProfile ? (
+        <div className="profile-info">
           <img src={profile.avatar_url} alt="" />
-          <h3>Nome: {profile.name}</h3>
-          <h4>Resumo: {profile.bio}</h4>
+          <div className="profile-name_resume">
+            <h3>{profile.name}</h3>
+            <h4>{profile.bio}</h4>
+          </div>
         </div>
       ) : (
-        "Usuário não encontrado"
+        <div className="not-found">
+          <p>
+            Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente.
+          </p>
+        </div>
       )}
     </>
   );
