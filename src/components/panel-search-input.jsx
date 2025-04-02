@@ -1,12 +1,18 @@
 import { useState } from "react";
 
-export function SearchInput({ setUserName, fetchProfile }) {
+export function SearchInput({ setUserName, fetchProfile, setSearched }) {
   const [inputValue, setInputValue] = useState("");
 
   function handleSubmitInput(event) {
     event.preventDefault();
+
+    if (!inputValue.trim()) {
+      alert("Insira um nome de usuário");
+    }
+
     fetchProfile(inputValue);
     setUserName(inputValue);
+    setSearched(true);
   }
 
   return (
@@ -14,7 +20,10 @@ export function SearchInput({ setUserName, fetchProfile }) {
       <input
         type="text"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        placeholder = "Digite aqui um usuário do Github"
+        aria-label="Campo de busca"
+        onChange={(e) => setInputValue(e.target.value)
+        }
       />
 
       <button onClick={handleSubmitInput}>

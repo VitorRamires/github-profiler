@@ -4,8 +4,8 @@ import { useGithubProfile } from "../hooks/useGithubProfile";
 
 export function ProfileInfo() {
   const [userName, setUserName] = useState("");
+  const [searched, setSearched] = useState(false);
   const { profile, isLoading, fetchProfile } = useGithubProfile();
-
   const verifyProfile = profile && profile.name;
 
   return (
@@ -14,6 +14,7 @@ export function ProfileInfo() {
         setUserName={setUserName}
         userName={userName}
         fetchProfile={fetchProfile}
+        setSearched={setSearched}
       />
       {isLoading ? (
         "Buscando"
@@ -26,11 +27,14 @@ export function ProfileInfo() {
           </div>
         </div>
       ) : (
-        <div className="not-found">
-          <p>
-            Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente.
-          </p>
-        </div>
+        searched && (
+          <div className="not-found">
+            <p>
+              Nenhum perfil foi encontrado com esse nome de usuário. Tente
+              novamente.
+            </p>
+          </div>
+        )
       )}
     </>
   );
