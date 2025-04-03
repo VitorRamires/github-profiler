@@ -47,7 +47,7 @@ ul {
   position: absolute;
   width: auto;
   height: 300px;
-  max-height: 35%;
+  max-height: 30%;
   top: 0;
   left: 0;
   transform: translate(-30%, -45%);
@@ -219,7 +219,7 @@ ul {
 
 @media screen and (max-height: 990px) {
   .point-decoration {
-    height: 17vw;
+    height: 15vw;
   }
 
   .ellipse-right {
