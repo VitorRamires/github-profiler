@@ -14,6 +14,8 @@ body {
   background-color: #1f1f1f;
   font-family: "Nunito";
   color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
 }
 
 img {
@@ -31,30 +33,32 @@ ul {
 
 .center {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -55%);
   width: 1440px;
   max-width: 85%;
-  height: 670px;
-  max-height: 75%;
   z-index: 6;
+  height: 680px;
+  max-height: 90%;
 }
 
 .point-decoration {
   position: absolute;
-  width: 250px;
-  height: auto;
+  width: auto;
+  height: 300px;
+  max-height: 35%;
   top: 0;
   left: 0;
-  transform: translate(-35%, -30%);
+  transform: translate(-30%, -45%);
   z-index: 2;
 }
 
 .ellipse-right {
   position: absolute;
-  width: 650px;
-  height: auto;
+  width: auto;
+  height: 800px;
+  max-height: 110%;
   top: 0;
   right: 0;
   z-index: 4;
@@ -62,7 +66,9 @@ ul {
 
 .ellipse-left {
   position: absolute;
-  height: 550px;
+  width: auto;
+  height: 680px;
+  max-height: 70%;
   bottom: 0;
   left: 0;
   z-index: 3;
@@ -72,6 +78,7 @@ ul {
 
 .title {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -79,6 +86,7 @@ ul {
   font-size: 4rem;
   margin-top: 40px;
   font-weight: 500;
+  padding: 20px;
 }
 
 .title img {
@@ -97,13 +105,16 @@ ul {
   background-color: #000000;
   z-index: 5;
   overflow: auto;
+  padding-bottom: 25px;
 }
+
+
 
 /* Search box */
 
 .search {
   position: sticky;
-  top: 0;
+  top: 2%;
   width: 650px;
   max-width: 95%;
   display: flex;
@@ -131,13 +142,14 @@ ul {
   padding: 15px;
   background-color: #005cff;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .search button img {
   width: 28px;
   height: auto;
-  cursor: pointer;
 }
+
 
 /* Profile Informations */
 
@@ -149,13 +161,13 @@ ul {
   justify-content: start;
   gap: 35px;
   margin: 0 auto;
-  border-radius: 25px;
+  border-radius: 30px;
   background-color: #d9d9d9;
 }
 
 .profile-info img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   border: 2px solid #005cff;
 }
@@ -176,6 +188,8 @@ ul {
   font-weight: 300;
 }
 
+
+
 /* not found */
 
 .not-found {
@@ -191,5 +205,44 @@ ul {
 
 .not-found p {
   max-width: 45ch;
-  margin:0 auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:1120px){
+  .profile-info{
+    width: 95%;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+}
+
+@media screen and (max-height: 990px) {
+  .point-decoration {
+    height: 17vw;
+  }
+
+  .ellipse-right {
+    height: 55vw;
+  }
+
+  .ellipse-left {
+    height: 55vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .search {
+    flex-direction: column;
+  }
+
+  .search button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .title {
+    font-size: 3rem;
+  }
 }

@@ -8,6 +8,7 @@ export function SearchInput({ setUserName, fetchProfile, setSearched }) {
 
     if (!inputValue.trim()) {
       alert("Insira um nome de usuário");
+      return
     }
 
     fetchProfile(inputValue);

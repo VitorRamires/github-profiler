@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SearchInput } from "./panel-search-input";
 import { useGithubProfile } from "../hooks/useGithubProfile";
+import { Loading } from "./loading";
 
 export function ProfileInfo() {
   const [userName, setUserName] = useState("");
@@ -17,8 +18,9 @@ export function ProfileInfo() {
         setSearched={setSearched}
       />
       {isLoading ? (
-        "Buscando"
+        <Loading />
       ) : verifyProfile ? (
+        <>
         <div className="profile-info">
           <img src={profile.avatar_url} alt="" />
           <div className="profile-name_resume">
@@ -26,6 +28,7 @@ export function ProfileInfo() {
             <h4>{profile.bio}</h4>
           </div>
         </div>
+        </>
       ) : (
         searched && (
           <div className="not-found">
