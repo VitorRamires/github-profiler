@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { iconSearch } from "../assets/icons/search-icon.svg";
 
 export function SearchInput({ setUserName, fetchProfile, setSearched }) {
   const [inputValue, setInputValue] = useState("");
@@ -8,7 +9,7 @@ export function SearchInput({ setUserName, fetchProfile, setSearched }) {
 
     if (!inputValue.trim()) {
       alert("Insira um nome de usuário");
-      return
+      return;
     }
 
     fetchProfile(inputValue);
@@ -21,14 +22,13 @@ export function SearchInput({ setUserName, fetchProfile, setSearched }) {
       <input
         type="text"
         value={inputValue}
-        placeholder = "Digite aqui um usuário do Github"
+        placeholder="Digite aqui um usuário do Github"
         aria-label="Campo de busca"
-        onChange={(e) => setInputValue(e.target.value)
-        }
+        onChange={(e) => setInputValue(e.target.value)}
       />
 
       <button onClick={handleSubmitInput}>
-        <img src="/src/assets/icons/search-icon.svg" alt="" />
+        <img src={iconSearch} alt="icon search" />
       </button>
     </div>
   );
