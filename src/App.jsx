@@ -1,7 +1,7 @@
 import { ProfilePanel } from "./components/profile-panel";
-import { blur1 } from "./assets/icons/blur1.svg";
-import { blur2 } from "./assets/icons/blur2.svg";
-import { dots } from "./assets/images/decoration.png";
+import  blur1 from "./assets/icons/blur1.svg";
+import  blur2  from "./assets/icons/blur2.svg";
+import  dots  from "./assets/images/decoration.png";
 function App() {
   return (
     <>

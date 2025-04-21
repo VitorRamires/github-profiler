@@ -1,5 +1,5 @@
 import { ProfileInfo } from "./profile-information";
-import { githubIcon } from "../assets/icons/github-icon.svg";
+import  githubIcon  from "../assets/icons/github-icon.svg";
 export function PanelContent() {
   return (
     <>

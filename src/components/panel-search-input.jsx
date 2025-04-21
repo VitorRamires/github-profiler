@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { iconSearch } from "../assets/icons/search-icon.svg";
+import iconSearch  from "../assets/icons/search-icon.svg";
 
 export function SearchInput({ setUserName, fetchProfile, setSearched }) {
   const [inputValue, setInputValue] = useState("");
