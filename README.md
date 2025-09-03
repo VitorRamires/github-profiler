@@ -1,12 +1,28 @@
-# React + Vite
+<h2>GitHub Profiler</h2>
+<p>Aplicação simples que consome a API pública do GitHub para buscar e exibir informações de perfis de usuários. Criada como teste técnico para demonstrar habilidades com JavaScript, HTML, CSS e integração com APIs REST.</p>
+<br/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎯 Objetivo
+<br/>
+<ul>
+  <li>Buscar perfis de usuários do GitHub via nome de usuário</li>
+  <li>Exibir dados como avatar, nome, bio, repositórios públicos, seguidores e seguindo</li>
+  <li>Praticar consumo de API, manipulação de DOM e responsividade</li>
+  <li>Servir como base para futuras evoluções (ex: favoritos, histórico, autenticação)</li>
+</ul>
 
-Currently, two official plugins are available:
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⚙️ Tecnologias Utilizadas
+<ul>
+  <li>HTML5: estrutura semântica</li>
+  <li>CSS3: estilização com Flexbox e media queries</li>
+  <li>JavaScript: interações básicas</li>
+  <li>GitHub API: integração via fetch</li>
+</ul>
 
-## Expanding the ESLint configuration
+<br />
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✒️ Autores
+<br/>
+Vitor Martins Ramires - Desenvolvedor principal
